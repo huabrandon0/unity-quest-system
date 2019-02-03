@@ -10,6 +10,8 @@ namespace Quests
 {
     public class QuestManager : SerializedMonoBehaviour
     {
+        public static QuestManager Instance { get; private set; }
+
         const string SAVE_FOLDER = "/SaveData";
         const string QUEST_DATA = "/QuestData.json";
         
@@ -27,6 +29,11 @@ namespace Quests
 
         void Awake()
         {
+            if (Instance != null && Instance != this)
+                Destroy(gameObject);
+            else
+                Instance = this;
+
             string dataPath = Application.isEditor ? Application.dataPath : Application.persistentDataPath;
             SaveFolderPath = string.Format("{0}{1}", dataPath, SAVE_FOLDER);
             QuestDataPath = string.Format("{0}{1}", SaveFolderPath, QUEST_DATA);
