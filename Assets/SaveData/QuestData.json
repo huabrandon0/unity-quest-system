@@ -1,0 +1,34 @@
+{
+    "$id": 0,
+    "$type": "0|Quests.QuestData, Assembly-CSharp",
+    "QuestCompletion": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.Dictionary`2[[Quests.QuestID, Assembly-CSharp],[System.Boolean, mscorlib]], mscorlib",
+        "comparer": {
+            "$id": 2,
+            "$type": "2|System.Collections.Generic.EnumEqualityComparer`1[[Quests.QuestID, Assembly-CSharp]], mscorlib",
+            "$rlength": 0,
+            "$rcontent": [
+            ]
+        },
+        "$rlength": 4,
+        "$rcontent": [
+            {
+                0,
+                true
+            },
+            {
+                1,
+                true
+            },
+            {
+                2,
+                true
+            },
+            {
+                3,
+                true
+            }
+        ]
+    }
+}

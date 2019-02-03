@@ -34,3 +34,14 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# DOTween Pro
+Assets/Demigiant/
+Assets/Resources/
+Assets/TextMesh Pro/
+Assets/Demigiant.meta
+Assets/Resources.meta
+
+# Odin Inspector/Serializer
+Assets/Plugins/Sirenix
+Assets/Plugins/Sirenix.meta
