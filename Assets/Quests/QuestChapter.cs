@@ -11,7 +11,7 @@ namespace Quests
     public class QuestChapter : SerializedScriptableObject
     {
         [SerializeField]
-        public Quest[] Quests{ get; set; }
+        public Quest[] Quests { get; set; }
 
         public bool Contains(QuestID questID)
         {

@@ -23,7 +23,7 @@ namespace Quests
         DataFormat DataFormat { get; set; } = DataFormat.JSON;
         
         [SerializeField]
-        QuestChapter[] QuestChapters { get; set; }
+        QuestBook QuestBook { get; set; }
 
         int CurrentQuestChapterIndex { get; set; } = 0;
 
@@ -54,7 +54,7 @@ namespace Quests
                 {
                     CurrentQuestChapterIndex = 0;
                     while (IsValidQuestChapterIndex(CurrentQuestChapterIndex) && 
-                        QuestChapters[CurrentQuestChapterIndex].Quests.All((quest) => QuestData.IsCompleted(quest.ID)))
+                        QuestBook.QuestChapters[CurrentQuestChapterIndex].Quests.All((quest) => QuestData.IsCompleted(quest.ID)))
                         CurrentQuestChapterIndex++;
                 }
             }
@@ -84,11 +84,11 @@ namespace Quests
         {
             if (!QuestData.IsCompleted(questID))
             {
-                QuestChapter currentQuestChapter = IsValidQuestChapterIndex(CurrentQuestChapterIndex) ? QuestChapters[CurrentQuestChapterIndex] : null;
+                QuestChapter currentQuestChapter = IsValidQuestChapterIndex(CurrentQuestChapterIndex) ? QuestBook.QuestChapters[CurrentQuestChapterIndex] : null;
                 if (currentQuestChapter != null && currentQuestChapter.Contains(questID))
                 {
                     QuestData.CompleteQuest(questID);
-                    if (QuestChapters[CurrentQuestChapterIndex].Quests.All((quest) => QuestData.IsCompleted(quest.ID)))
+                    if (QuestBook.QuestChapters[CurrentQuestChapterIndex].Quests.All((quest) => QuestData.IsCompleted(quest.ID)))
                         CurrentQuestChapterIndex++;
                 }
             }
@@ -96,7 +96,7 @@ namespace Quests
 
         bool IsValidQuestChapterIndex(int chapter)
         {
-            return chapter >= 0 && chapter < QuestChapters.Length;
+            return chapter >= 0 && chapter < QuestBook.QuestChapters.Length;
         }
     }
 }

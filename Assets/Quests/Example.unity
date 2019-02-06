@@ -214,8 +214,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: c2658b2d49785484b944b311c68bb04b, type: 2}
-    - {fileID: 11400000, guid: f37ec97547035c346bb627607ce3e02f, type: 2}
+    - {fileID: 11400000, guid: 8b3c659620d824744a0fe868c504d68c, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -224,24 +223,9 @@ MonoBehaviour:
     - Name: QuestData
       Entry: 6
       Data: 
-    - Name: QuestChapters
-      Entry: 7
-      Data: 0|Quests.QuestChapter[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
+    - Name: QuestBook
       Entry: 10
       Data: 0
-    - Name: 
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
 --- !u!4 &265707859
 Transform:
   m_ObjectHideFlags: 0
